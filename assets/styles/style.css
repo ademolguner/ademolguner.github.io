@@ -3690,13 +3690,21 @@ body {
 /**
  * 11.3 - Section Skills
  */
+
+.textalign-left{
+    text-align:left;
+}
+.margin-bottom-20{
+    margin-bottom:20px !important;
+}
 .section-skills .section-box {
     padding-bottom: 50px;
 }
 
 .progress-bar {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 5px;
+    /*margin-bottom: 40px;*/
 }
 
 .progress-bar .bar-data {

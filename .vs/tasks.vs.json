@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-index",
+      "appliesTo": "index.html",
+      "type": "launch"
+    }
+  ],
+  "command": "Chrome",
+    "windows": {
+        "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+    },
+  "args": [ "${file}" ]
+}
