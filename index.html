@@ -660,6 +660,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </section>
 
@@ -753,7 +754,7 @@
                                         <h3>Digital IK- Insan Kaynakları Portalı</h3>
                                         <h4><span class="text-danger">[ Takım Üyesi ]</span></h4>
                                         <p style="text-align: center; width: 100%;">
-                                            <a href="/projects/digitakil.html" class='li-modal btn btn-sm btn-success text-color-white'>Detay</a>
+                                            <a href="/projects/digitakil.html"  class='li-modal btn btn-sm btn-success text-color-white'>Detay</a>
                                         </p>
                                     </div>
                                 </div>
@@ -953,6 +954,8 @@
                     </div>
                 </section>
 
+
+
                 <section id="education" class="section section-education">
                     <div class="animate-up">
                         <h2 class="section-title">Education</h2>
@@ -981,6 +984,22 @@
                         </div>
                     </div>
                 </section>
+
+                <section id="articles" class="section section-articles">
+                    <div class="animate-up">
+                        <h2 class="section-title">Medium Articles</h2>
+                        <div class="timeline">
+                            <div class="timeline-bar"></div>
+                            <div class="timeline-inner clearfix" id="mediumArticledArea">
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
             </div>
         </div>
         <br><br>
@@ -1008,14 +1027,7 @@
         </div>
     </div>
 
-    <h1>RSS Reader (JavaScript)</h1>
-    <output>Loading...</output>
-    <template>
-        <h2></h2>
-        <h3></h3>
-        <a href='#'></a>
-        <p></p>
-    </template>
+
 
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -1030,7 +1042,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-   
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/blogitem.css">
+
+
     <script type="text/javascript">
 
         $('.li-modal').on('click', function (e) {
@@ -1039,25 +1056,58 @@
         });
 
 
+        // Medium RSS
+        // https://medium.jasonmdesign.com/display-medium-articles-on-your-site-d772b3b05779
 
+        $(function () {
+            var $content = $('#mediumArticledArea');
+            var data = {
+                rss_url: 'https://medium.com/feed/@ademolguner'
+            };
+            $.get('https://api.rss2json.com/v1/api.json', data, function (response) {
+                if (response.status == 'ok') {
+                    var output = '';
+                    var number = parseInt(0);
+                    $.each(response.items, function (k, item) {
+                        number += parseInt(1);
+                        if (parseInt(number) % 2 != 0) {
+                            output += "<div class='timeline-box timeline-box-left'>" +
+                            "<span class='dot'></span>" +
+                            "<div class='timeline-box-inner animate-right'>" +
+                            "<span class='arrow'></span>" +
+                            "<div class='date'>" + $.format.date(item.pubDate, "dd.MM.yyyy") + "</div>" +
+                            "<h3>" + item.title + "</h3>" +
+                            "<h4></h4>" +
+                            "<p style='text-align: center; width: 100%;'>" +
+                            "<a href='" + item.guid + "'\' target='_blank' class='li-modal btn btn-sm btn-success text-color-white'>Makaleye Git</a>" +
+                            "</p>" +
+                            "</div>" +
+                            "</div>";
+                        } else {
+                            output += "<div class='timeline-box timeline-box-right'>" +
+                            "<span class='dot'></span>" +
+                            "<div class='timeline-box-inner animate-left'>" +
+                            "<span class='arrow'></span>" +
+                            "<div class='date'>" + $.format.date(item.pubDate, "dd.MM.yyyy") + "</div>" +
+                            "<h3>" + item.title + "</h3>" +
+                            "<h4></h4>" +
+                            "<p style='text-align: center; width: 100%;'>" +
+                            "<a href='" + item.guid + "'\' target='_blank' class='li-modal btn btn-sm btn-success text-color-white'>Makaleye Git</a>" +
+                            "</p>" +
+                            "</div>" +
+                            "</div>";
+                        }
+                        
 
-                            //$.ajax({
-                            //    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("https://medium.com/feed/@ademolguner"),
-                            //    dataType: 'json',
-                            //    success: function (data) {
-                            //        if (data.responseData.feed && data.responseData.feed.entries) {
-                            //            $.each(data.responseData.feed.entries, function (i, e) {
-                            //                console.log("------------------------");
-                            //                console.log("title      : " + e.title);
-                            //                console.log("author     : " + e.author);
-                            //                console.log("description: " + e.description);
-                            //            });
-                            //        }
-                            //    }
-                            //});
+                        return k < 10;
+                    });
+                    $content.html(output).hide();
+                    $content.fadeIn('slow');
+                }
+            });
+        });
 
-
-
+        
     </script>
 </body>
 

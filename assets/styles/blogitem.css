@@ -1,0 +1,40 @@
+body {
+    /*background-color: #37536A;
+    color: #ffffff;
+    width: 50vw;
+}*/
+
+.medium-blog-post {
+    display: table;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in, transform 0.2s ease-in;
+    margin-bottom: 50px;
+}
+
+.medium-blog-title {
+    display: table-cell;
+    background-color: #FFFFFF;
+    color: #37536A; /*darkblue*/
+    width: 75%;
+    padding: 20px 40px;
+}
+
+    .medium-blog-title h2 {
+        margin: 0;
+    }
+
+.medium-blog-date {
+    position: relative;
+    display: table-cell;
+    color: #FFFFFF;
+    background-color: #71C6D2; /*vibblue*/
+    vertical-align: top;
+    height: 100%;
+    padding: 20px;
+    width: 25%;
+}
+
+.medium-blog-post:hover {
+    background-color: #71C6D2; /*vibblue*/
+    transform: scale(1.01);
+}
