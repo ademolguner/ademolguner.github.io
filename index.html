@@ -20,15 +20,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/Icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/Icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/Icons/favicon-16x16.png">
-    <!--<link rel="manifest" href="/manifest.json">-->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-
-
-
-    <script src='/assets/scripts/rss.js' type="text/javascript"></script>
+     
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredoka+One">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic">
     <link rel="stylesheet" type="text/css" href="/assets/fonts/icomoon/style.css">
@@ -44,19 +39,8 @@
         ga('create', 'UA-91090459-1', 'auto');
         ga('send', 'pageview');
     </script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Modernizer for detect what features the user’s browser has to offer -->
     <script type="text/javascript" src="/assets/scripts/libs/modernizr.js"></script>
-
     <link rel="stylesheet" type="text/css" href="/assets/bootstrap/boostrapstyle.css">
-
-
-
-
 </head>
 
 <body class="home header-has-img loading">
@@ -754,7 +738,7 @@
                                         <h3>Digital IK- Insan Kaynakları Portalı</h3>
                                         <h4><span class="text-danger">[ Takım Üyesi ]</span></h4>
                                         <p style="text-align: center; width: 100%;">
-                                            <a href="/projects/digitakil.html"  class='li-modal btn btn-sm btn-success text-color-white'>Detay</a>
+                                            <a href="/projects/digitakil.html" class='li-modal btn btn-sm btn-success text-color-white'>Detay</a>
                                         </p>
                                     </div>
                                 </div>
@@ -768,7 +752,7 @@
                                         <h3>KnowledgeBase Icerik Yönetim Portalı</h3>
                                         <h4><span class="text-danger">[ Takım Üyesi ]</span></h4>
                                         <p style="text-align: center; width: 100%;">
-                                            <a href="/projects/knowledgebase.html" class='li-modal btn btn-sm btn-success text-color-white' '>Detay</a>
+                                            <a href="/projects/knowledgebase.html" class='li-modal btn btn-sm btn-success text-color-white'>Detay</a>
                                         </p>
                                     </div>
                                 </div>
@@ -1002,8 +986,8 @@
 
             </div>
         </div>
-        <br><br>
-        <footer class="footer">
+         
+        <footer class="footer padding-20" >
             Adem OLGUNER &copy; 2019
         </footer>
     </div>
@@ -1038,13 +1022,11 @@
     <script type="text/javascript" src="/assets/scripts/site.js"></script>
 
 
-    <!--<link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
+     
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script> 
     <link rel="stylesheet" type="text/css" href="/assets/styles/blogitem.css">
 
 
@@ -1054,8 +1036,8 @@
             e.preventDefault();
             $('#myModal').modal('show').find('.modal-content').load($(this).attr('href'));
         });
-
-
+    </script>
+    <script type="text/javascript">
         // Medium RSS
         // https://medium.jasonmdesign.com/display-medium-articles-on-your-site-d772b3b05779
 
@@ -1072,32 +1054,32 @@
                         number += parseInt(1);
                         if (parseInt(number) % 2 != 0) {
                             output += "<div class='timeline-box timeline-box-left'>" +
-                            "<span class='dot'></span>" +
-                            "<div class='timeline-box-inner animate-right'>" +
-                            "<span class='arrow'></span>" +
-                            "<div class='date'>" + $.format.date(item.pubDate, "dd.MM.yyyy") + "</div>" +
-                            "<h3>" + item.title + "</h3>" +
-                            "<h4></h4>" +
-                            "<p style='text-align: center; width: 100%;'>" +
-                            "<a href='" + item.guid + "'\' target='_blank' class='li-modal btn btn-sm btn-success text-color-white'>Makaleye Git</a>" +
-                            "</p>" +
-                            "</div>" +
-                            "</div>";
+                                "<span class='dot'></span>" +
+                                "<div class='timeline-box-inner animate-right'>" +
+                                "<span class='arrow'></span>" +
+                                "<div class='date'>" + $.format.date(item.pubDate, "dd.MM.yyyy") + "</div>" +
+                                "<h3>" + item.title + "</h3>" +
+                                "<h4></h4>" +
+                                "<p style='text-align: center; width: 100%;'>" +
+                                "<a href='" + item.guid + "'\' target='_blank' class='btn btn-sm btn-success text-color-white'>Makaleye Git</a>" +
+                                "</p>" +
+                                "</div>" +
+                                "</div>";
                         } else {
                             output += "<div class='timeline-box timeline-box-right'>" +
-                            "<span class='dot'></span>" +
-                            "<div class='timeline-box-inner animate-left'>" +
-                            "<span class='arrow'></span>" +
-                            "<div class='date'>" + $.format.date(item.pubDate, "dd.MM.yyyy") + "</div>" +
-                            "<h3>" + item.title + "</h3>" +
-                            "<h4></h4>" +
-                            "<p style='text-align: center; width: 100%;'>" +
-                            "<a href='" + item.guid + "'\' target='_blank' class='li-modal btn btn-sm btn-success text-color-white'>Makaleye Git</a>" +
-                            "</p>" +
-                            "</div>" +
-                            "</div>";
+                                "<span class='dot'></span>" +
+                                "<div class='timeline-box-inner animate-left'>" +
+                                "<span class='arrow'></span>" +
+                                "<div class='date'>" + $.format.date(item.pubDate, "dd.MM.yyyy") + "</div>" +
+                                "<h3>" + item.title + "</h3>" +
+                                "<h4></h4>" +
+                                "<p style='text-align: center; width: 100%;'>" +
+                                "<a href='" + item.guid + "'\' target='_blank' class='btn btn-sm btn-success text-color-white'>Makaleye Git</a>" +
+                                "</p>" +
+                                "</div>" +
+                                "</div>";
                         }
-                        
+
 
                         return k < 10;
                     });
@@ -1107,7 +1089,7 @@
             });
         });
 
-        
+
     </script>
 </body>
 

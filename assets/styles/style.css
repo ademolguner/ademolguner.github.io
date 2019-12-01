@@ -6694,3 +6694,7 @@ body {
 .bg-red-dark {
     background-color: #f74034 !important;
 }
+
+.padding-20 {
+    padding: 20px 0px 20px 0px;
+}
