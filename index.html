@@ -28,7 +28,7 @@
 
 
 
-
+    <script src='/assets/scripts/rss.js' type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredoka+One">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic">
     <link rel="stylesheet" type="text/css" href="/assets/fonts/icomoon/style.css">
@@ -1008,6 +1008,15 @@
         </div>
     </div>
 
+    <h1>RSS Reader (JavaScript)</h1>
+    <output>Loading...</output>
+    <template>
+        <h2></h2>
+        <h3></h3>
+        <a href='#'></a>
+        <p></p>
+    </template>
+
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/scripts/plugins/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -1021,12 +1030,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+   
     <script type="text/javascript">
 
         $('.li-modal').on('click', function (e) {
             e.preventDefault();
             $('#myModal').modal('show').find('.modal-content').load($(this).attr('href'));
         });
+
+
+
+
+                            //$.ajax({
+                            //    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("https://medium.com/feed/@ademolguner"),
+                            //    dataType: 'json',
+                            //    success: function (data) {
+                            //        if (data.responseData.feed && data.responseData.feed.entries) {
+                            //            $.each(data.responseData.feed.entries, function (i, e) {
+                            //                console.log("------------------------");
+                            //                console.log("title      : " + e.title);
+                            //                console.log("author     : " + e.author);
+                            //                console.log("description: " + e.description);
+                            //            });
+                            //        }
+                            //    }
+                            //});
+
+
 
     </script>
 </body>
