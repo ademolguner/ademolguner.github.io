@@ -23,7 +23,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-     
+
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredoka+One">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic">
     <link rel="stylesheet" type="text/css" href="/assets/fonts/icomoon/style.css">
@@ -51,14 +51,14 @@
         <div class="content">
 
             <div class="container">
-                <section id="about" class="section section-about">
+                <section id="about" class="section section-about ">
                     <div class="animate-up">
-                        <div class="section-box">
+                        <div class="section-box bg-transparent">
                             <div class="profile">
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="profile-photo">
-                                            <img src="/assets/images/adem-olguner.jpg" alt="Adem OLGUNER" />
+                                            <img src="/assets/images/adem-olguner.jpg" alt="Adem OLGUNER" class="image-border-radius" />
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
@@ -109,21 +109,7 @@
                                             <i class="rsicon rsicon-linkedin"></i>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a class="ripple-centered" href="https://plus.google.com" target="_blank">
-                                            <i class="rsicon rsicon-google-plus"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="ripple-centered" href="https://dribbble.com" target="_blank">
-                                            <i class="rsicon rsicon-dribbble"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="ripple-centered" href="https://www.instagram.com" target="_blank">
-                                            <i class="rsicon rsicon-instagram"></i>
-                                        </a>
-                                    </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -986,8 +972,8 @@
 
             </div>
         </div>
-         
-        <footer class="footer padding-20" >
+        <br />
+        <footer class="footer padding-20">
             Adem OLGUNER &copy; 2019
         </footer>
     </div>
@@ -1022,11 +1008,11 @@
     <script type="text/javascript" src="/assets/scripts/site.js"></script>
 
 
-    
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-     
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
     <link rel="stylesheet" type="text/css" href="/assets/styles/blogitem.css">
 
 
@@ -1058,7 +1044,8 @@
                                 "<div class='timeline-box-inner animate-right'>" +
                                 "<span class='arrow'></span>" +
                                 "<div class='date'>" + $.format.date(item.pubDate, "dd.MM.yyyy") + "</div>" +
-                                "<h3>" + item.title + "</h3>" +
+                                "<h3> <a href='" + item.guid + "'\' target='_blank' class=''>" + item.title + "</a> </h3>" +
+                                //"<h3>" + item.title + "</h3>" +
                                 "<h4></h4>" +
                                 "<p style='text-align: center; width: 100%;'>" +
                                 "<a href='" + item.guid + "'\' target='_blank' class='btn btn-sm btn-success text-color-white'>Makaleye Git</a>" +
@@ -1071,7 +1058,8 @@
                                 "<div class='timeline-box-inner animate-left'>" +
                                 "<span class='arrow'></span>" +
                                 "<div class='date'>" + $.format.date(item.pubDate, "dd.MM.yyyy") + "</div>" +
-                                "<h3>" + item.title + "</h3>" +
+                                "<h3> <a href='" + item.guid + "'\' target='_blank' class=''>" + item.title + "</a> </h3>" +
+                                //"<h3>" + item.title + "</h3>" +
                                 "<h4></h4>" +
                                 "<p style='text-align: center; width: 100%;'>" +
                                 "<a href='" + item.guid + "'\' target='_blank' class='btn btn-sm btn-success text-color-white'>Makaleye Git</a>" +

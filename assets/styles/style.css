@@ -2335,6 +2335,7 @@ body {
     line-height: 1.2;
     font-weight: 600;
     text-align: center;
+    margin:15px 0px;
 }
 
 .grid-box,
@@ -3500,7 +3501,8 @@ body {
  * 11.2 - Section About
  */
 .section-about {
-    padding-top: 40px;
+    padding-top: 0px;
+    /*padding-top: 40px;*/
     position: relative;
     margin-top: 150px;
 }
@@ -3518,13 +3520,14 @@ body {
     margin-bottom: 10px;
 }
 
-.section-about .profile-info {
-    color: #3d4451;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #dedede;
-    text-align: left;
-}
+    .section-about .profile-info {
+        color: #ffffff;
+        /*color: #3d4451;*/
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid #dedede;
+        text-align: left;
+    }
 
 .section-about .profile-title {
     font-size: 36px;
@@ -3588,16 +3591,17 @@ body {
     margin-bottom: 13px;
 }
 
-.profile-list .title {
-    display: block;
-    width: 120px;
-    float: left;
-    color: #333333;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 20px;
-    text-transform: uppercase;
-}
+    .profile-list .title {
+        display: block;
+        width: 120px;
+        float: left;
+        /*color: #333333;*/
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
 
 .profile-list .cont {
     display: block;
@@ -6697,4 +6701,14 @@ body {
 
 .padding-20 {
     padding: 20px 0px 20px 0px;
+}
+
+
+.image-border-radius{
+    border-radius:160px;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+    box-shadow:none !important;
 }
