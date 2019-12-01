@@ -2344,8 +2344,8 @@ body {
 .calendar-busy,
 .timeline-box-inner,
 .sidebar-default .profile-photo img {
-    /* background-color: #fff;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); */
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
 @media (max-width: 992px) {
@@ -3519,8 +3519,7 @@ body {
 }
 
 .section-about .profile-info {
-    /*color: #3d4451;*/
-    color:#ffffff;
+    color: #3d4451;
     padding-bottom: 25px;
     margin-bottom: 25px;
     border-bottom: 1px solid #dedede;
@@ -3690,21 +3689,13 @@ body {
 /**
  * 11.3 - Section Skills
  */
-
-.textalign-left{
-    text-align:left;
-}
-.margin-bottom-20{
-    margin-bottom:20px !important;
-}
 .section-skills .section-box {
     padding-bottom: 50px;
 }
 
 .progress-bar {
     position: relative;
-    margin-bottom: 5px;
-    /*margin-bottom: 40px;*/
+    margin-bottom: 40px;
 }
 
 .progress-bar .bar-data {
@@ -6682,13 +6673,24 @@ body {
 }
 
 .bg-orange-dark {
-    background-color: #ff9801 !important;
+    background-color: #f7a732 !important;
 }
 
 
 .bg-green {
-    background-color: #80ca54 !important;
+    background-color: #4bdb5b !important;
 }
+
 .bg-green-dark {
-    background-color: #138a45 !important;
+    background-color: #0b6f22 !important;
+}
+
+
+
+.bg-red {
+    background-color: #faa49f !important;
+}
+
+.bg-red-dark {
+    background-color: #f74034 !important;
 }
