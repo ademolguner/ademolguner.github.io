@@ -3652,6 +3652,7 @@ body {
     .section-about .profile-photo {
         margin-right: 0;
         margin-bottom: 30px;
+        margin-top:-7px;
     }
 }
 
