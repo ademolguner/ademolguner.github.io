@@ -64,7 +64,7 @@
                                     <div class="col-xs-7">
                                         <div class="profile-info">
                                             <div class="profile-preword">
-                                                <span>Bir garip programcı</span>
+                                                <span>Get back to code !</span>
                                             </div>
                                             <h1 class="profile-title">Adem OLGUNER</h1>
 
@@ -109,7 +109,12 @@
                                             <i class="rsicon rsicon-linkedin"></i>
                                         </a>
                                     </li>
-
+                                    <li>
+                                        <a class="ripple-centered"
+                                           href="https://www.youtube.com/channel/UC1q--aonwmS7JA3oO6IbcHQ?view_as=subscriber" target="_blank">
+                                            <i class="rsicon rsicon-youtube"></i>
+                                        </a>
+                                    </li> 
                                 </ul>
                             </div>
                         </div>
@@ -941,9 +946,9 @@
                                         <div class="date">2005 - 2010</div>
                                         <h3>UNDERGRADUATE</h3>
                                         <h4>
-                                            ELEKTRIK
+                                            ELEKTRIC
                                             <br />GAZI UNIVERSITY
-                                            <br />TECHNOLOGY ENGINEERING
+                                            <br />FACULTY OF TECHNOLOGY ENGINEERING
                                         </h4>
                                         <p style="text-align: center; width: 100%;">
                                             <img alt="" src="/assets/images/Gazi_University_logo.png" style="width: 150px;" />
@@ -1006,7 +1011,7 @@
     <script type="text/javascript" src="/assets/scripts/plugins/jquery.onepagenav.min.js"></script>
     <script type="text/javascript" src="/assets/scripts/options.js"></script>
     <script type="text/javascript" src="/assets/scripts/site.js"></script>
-
+    <script type="text/javascript" src="/assets/scripts/rssread.js"></script>
 
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -1017,68 +1022,12 @@
 
 
     <script type="text/javascript">
-
         $('.li-modal').on('click', function (e) {
             e.preventDefault();
             $('#myModal').modal('show').find('.modal-content').load($(this).attr('href'));
         });
     </script>
-    <script type="text/javascript">
-        // Medium RSS
-        // https://medium.jasonmdesign.com/display-medium-articles-on-your-site-d772b3b05779
 
-        $(function () {
-            var $content = $('#mediumArticledArea');
-            var data = {
-                rss_url: 'https://medium.com/feed/@ademolguner'
-            };
-            $.get('https://api.rss2json.com/v1/api.json', data, function (response) {
-                if (response.status == 'ok') {
-                    var output = '';
-                    var number = parseInt(0);
-                    $.each(response.items, function (k, item) {
-                        number += parseInt(1);
-                        if (parseInt(number) % 2 != 0) {
-                            output += "<div class='timeline-box timeline-box-left'>" +
-                                "<span class='dot'></span>" +
-                                "<div class='timeline-box-inner animate-right'>" +
-                                "<span class='arrow'></span>" +
-                                "<div class='date'>" + $.format.date(item.pubDate, "dd.MM.yyyy") + "</div>" +
-                                "<h3> <a href='" + item.guid + "'\' target='_blank' class=''>" + item.title + "</a> </h3>" +
-                                //"<h3>" + item.title + "</h3>" +
-                                "<h4></h4>" +
-                                "<p style='text-align: center; width: 100%;'>" +
-                                "<a href='" + item.guid + "'\' target='_blank' class='btn btn-sm btn-success text-color-white'>Makaleye Git</a>" +
-                                "</p>" +
-                                "</div>" +
-                                "</div>";
-                        } else {
-                            output += "<div class='timeline-box timeline-box-right'>" +
-                                "<span class='dot'></span>" +
-                                "<div class='timeline-box-inner animate-left'>" +
-                                "<span class='arrow'></span>" +
-                                "<div class='date'>" + $.format.date(item.pubDate, "dd.MM.yyyy") + "</div>" +
-                                "<h3> <a href='" + item.guid + "'\' target='_blank' class=''>" + item.title + "</a> </h3>" +
-                                //"<h3>" + item.title + "</h3>" +
-                                "<h4></h4>" +
-                                "<p style='text-align: center; width: 100%;'>" +
-                                "<a href='" + item.guid + "'\' target='_blank' class='btn btn-sm btn-success text-color-white'>Makaleye Git</a>" +
-                                "</p>" +
-                                "</div>" +
-                                "</div>";
-                        }
-
-
-                        return k < 10;
-                    });
-                    $content.html(output).hide();
-                    $content.fadeIn('slow');
-                }
-            });
-        });
-
-
-    </script>
 </body>
 
 </html>

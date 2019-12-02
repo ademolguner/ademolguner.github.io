@@ -3521,7 +3521,7 @@ body {
 }
 
     .section-about .profile-info {
-        color: #ffffff;
+        color: #1a77d4;
         /*color: #3d4451;*/
         padding-bottom: 25px;
         margin-bottom: 25px;
@@ -3563,7 +3563,7 @@ body {
     line-height: 1.1;
     display: inline-block;
     padding: 7px 12px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     position: relative;
 }
 
@@ -3596,7 +3596,7 @@ body {
         width: 120px;
         float: left;
         /*color: #333333;*/
-        color: #ffffff;
+        color: #1a77d4;
         font-size: 12px;
         font-weight: 700;
         line-height: 20px;
