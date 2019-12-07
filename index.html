@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="theme-color-1a77d4 theme-skin-light">
 
 <head>
@@ -1104,9 +1104,9 @@
         <div class="preload-text">Loading ...</div>
     </div>
 
-    <div class="modal fade " id="myModal" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <div class="modal fade modal-xl" id="myModal" role="dialog">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content modal-xl">
 
             </div>
         </div>
@@ -1128,7 +1128,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/blogitem.css">
+    <!--<link rel="stylesheet" type="text/css" href="/assets/styles/blogitem.css">-->
 
 
     <script type="text/javascript">
@@ -1136,6 +1136,48 @@
             e.preventDefault();
             $('#myModal').modal('show').find('.modal-content').load($(this).attr('href'));
         });
+
+
+        function ModalPopup (pageUrl){
+            $('#myModal').modal('show').find('.modal-content').load(pageUrl);
+        }
+        
+
+        (function ($) {
+            $.QueryString = (function (paramsArray) {
+                console.log(window.location);
+                let params = {};
+
+                for (let i = 0; i < paramsArray.length; ++i) {
+                    let param = paramsArray[i].split('=', 2);
+                    
+                    if (param.length !== 2)
+                        continue;
+                    
+                    params[param[0]] = decodeURIComponent(param[1].replace(/\+/g, " "));
+                    if (param[0] == "project") {
+                        var projectUrl = "/projects/" + decodeURIComponent(param[1].replace(/\+/g, " ")) + ".html";
+                        ModalPopup(projectUrl);
+                        continue;
+                    }
+                }
+
+                return params;
+            })(window.location.search.substr(1).split('&'))
+        })(jQuery);
+
+
+
+        $('#myModal').on('hidden.bs.modal', function () {
+            //console.log("modal popup kapandı");
+            console.log(window.location);
+            if (window.location.search != "") {
+                window.location = "/";
+            }
+            
+        });
+
+
     </script>
 
 </body>
